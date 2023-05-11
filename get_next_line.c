@@ -6,7 +6,7 @@
 /*   By: xredm <xredm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 14:02:58 by mredkole          #+#    #+#             */
-/*   Updated: 2023/05/10 15:08:17 by xredm            ###   ########.fr       */
+/*   Updated: 2023/05/11 15:19:04 by xredm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,36 +109,3 @@ char	*get_next_line(int fd)
 	total = next_line(total);
 	return (line);
 }
-// int	main(void)
-// {
-// 	char	*line;
-// 	int		fd;
-// 	int		fd2;
-// 	int		fd3;
-// 	int		i;
-    
-// 	fd = open("bla1.txt", O_RDONLY);
-// 	//bonus
-// 	//fd2 = open("test2.txt", O_RDONLY);
-// 	//fd3 = open("test3.txt", O_RDONLY);
-    
-// 	i = 0;
-// 	while (i < 10)
-// 	{
-// 		line = get_next_line(fd);
-// 		printf("line %d: %s", i, line);
-// 		free(line);
-// 		//bonuses
-// 		//line = get_next_line(fd2);
-// 		//printf("line %d: %s", i, line);
-// 		//free(line);
-// 		//line = get_next_line(fd3);
-// 		//printf("line %d: %s", i, line);
-// 		//free(line);
-// 		i++;
-// 	}
-// 	close(fd);
-// 	close(fd2);
-// 	close(fd3);
-// 	return (0);
-// }

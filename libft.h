@@ -6,7 +6,7 @@
 /*   By: xredm <xredm@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 13:23:24 by mredkole          #+#    #+#             */
-/*   Updated: 2023/05/10 15:08:13 by xredm            ###   ########.fr       */
+/*   Updated: 2023/05/11 15:19:56 by xredm            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdio.h>
 # include <string.h>
 # include <ctype.h>
+# include <stdlib.h>
+# include <stdarg.h>
 # include <stdlib.h>
 
 # ifndef BUFFER_SIZE
@@ -75,4 +77,13 @@ char	*read_file(int fd, char *result);
 char	*get_line(char *total);
 char	*next_line(char *total);
 char	*get_next_line(int fd);
+void	pointer_check(unsigned long long num, int *len);
+void	ft_format_check(va_list *ap, int *len, char format);
+int		ft_printf(const char *placeholder, ...);
+void	ft_putcharr(int c, int *len);
+void	ft_putstrr(char *ap, int *len);
+void	ft_num(int num, int *len);
+void	ft_num_unsigned(unsigned int num, int *len);
+void	ft_conv_hexa(unsigned long long num, char format, int *len);
+
 #endif
