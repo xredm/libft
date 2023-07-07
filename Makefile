@@ -6,7 +6,7 @@
 #    By: xredm <xredm@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/16 18:43:53 by mredkole          #+#    #+#              #
-#    Updated: 2023/05/11 14:56:18 by xredm            ###   ########.fr        #
+#    Updated: 2023/05/15 21:31:12 by xredm            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,19 +38,19 @@ CC := cc
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+	@ar rc $(NAME) $(OBJS)
 
 .c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+	@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 
 bonus: ${NAME} ${OBJSB}
-	ar rc ${NAME} ${OBJSB}
+	@ar rc ${NAME} ${OBJSB}
 
 clean:
-	rm -f ${OBJS} ${OBJSB}
+	@rm -f ${OBJS} ${OBJSB} 
 
 fclean: clean
-	rm -f ${NAME} ${bonus}
+	@rm -f ${NAME} ${bonus} 
 
 re: fclean all
 
